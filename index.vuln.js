@@ -6,7 +6,8 @@ var bodyParser = require('body-parser')
 var app = express()
  
 app.use(helmet({
-    frameguard: false
+    frameguard: false,
+    noSniff: false
   }))
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
