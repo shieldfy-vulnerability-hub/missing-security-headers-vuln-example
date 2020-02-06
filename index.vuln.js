@@ -4,7 +4,8 @@ const helmet = require('helmet')
 var bodyParser = require('body-parser')
  
 var app = express()
- 
+app.use(helmet.contentSecurityPolicy())
+
 app.use(helmet({
     frameguard: false,
     noSniff: false
