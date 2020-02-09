@@ -4,6 +4,7 @@ const helmet = require('helmet')
 var bodyParser = require('body-parser')
  
 var app = express()
+app.disable('x-powered-by')
 app.use(helmet.contentSecurityPolicy())
 
 app.use(helmet({
